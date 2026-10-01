@@ -1,0 +1,44 @@
+package Produto;
+
+public class ProdutoFisico extends Produto implements Venda {
+
+    private double frete;
+
+    public ProdutoFisico(int codigo, String nome, double preco, double frete) {
+        super(codigo, nome, preco);
+        this.frete = frete;
+    }
+
+    public double getFrete() {
+        return frete;
+    }
+
+    public void setFrete(double frete) {
+        this.frete = frete;
+    }
+
+    @Override
+    public String getTipo() {
+        return "Produto Físico";
+    }
+
+    @Override
+    public void exibirDados() {
+        super.exibirDados();
+        System.out.printf("Frete....: R$ %.2f%n", frete);
+    }
+
+    @Override
+    public double realizarVenda(int quantidade) {
+        return (getPreco() * quantidade) + frete;
+    }
+
+    @Override
+    public double realizarVenda(int quantidade, double desconto) {
+
+        double total = (getPreco() * quantidade) + frete;
+        double valorDesconto = total * (desconto / 100);
+
+        return total - valorDesconto;
+    }
+}
