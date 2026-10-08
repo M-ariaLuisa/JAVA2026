@@ -1,6 +1,7 @@
-package AtividadeAula14;
+package AtividadeAula14.Atividade;
 
 import javax.swing.JOptionPane;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
