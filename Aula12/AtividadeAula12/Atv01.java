@@ -1,4 +1,4 @@
-package Atividade;
+package AtividadeAula12;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

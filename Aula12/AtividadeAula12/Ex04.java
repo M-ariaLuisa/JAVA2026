@@ -1,3 +1,4 @@
+package AtividadeAula12;
 import java.util.Scanner;
 
 public class Ex04 {
